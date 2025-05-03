@@ -1,0 +1,172 @@
+/* MailSuite Content Script Styles */
+
+/* Tracking button styles */
+.mailsuite-tracking-button {
+  cursor: pointer;
+  margin-right: 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  color: #5f6368;
+  font-size: 14px;
+  padding: 6px 12px;
+  transition: all 0.2s ease;
+}
+
+.mailsuite-tracking-button:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.mailsuite-tracking-enabled {
+  color: #1a73e8;
+  font-weight: 500;
+  background-color: rgba(26, 115, 232, 0.08);
+}
+
+.mailsuite-tracking-enabled:hover {
+  background-color: rgba(26, 115, 232, 0.12);
+}
+
+/* Tooltip styles */
+.mailsuite-tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.mailsuite-tooltip .mailsuite-tooltip-text {
+  visibility: hidden;
+  width: 120px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  font-size: 12px;
+}
+
+.mailsuite-tooltip:hover .mailsuite-tooltip-text {
+  visibility: visible;
+  opacity: 1;
+}
+
+/* MailSuite compose menu */
+.mailsuite-compose-menu {
+  margin-top: 8px;
+  padding: 8px;
+  border-top: 1px solid #e0e0e0;
+}
+
+.mailsuite-compose-menu-title {
+  font-size: 13px;
+  font-weight: 500;
+  color: #5f6368;
+  margin-bottom: 8px;
+}
+
+.mailsuite-compose-menu-options {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.mailsuite-option-chip {
+  display: inline-flex;
+  align-items: center;
+  background-color: #f1f3f4;
+  border-radius: 16px;
+  padding: 4px 12px;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.mailsuite-option-chip:hover {
+  background-color: #e8eaed;
+}
+
+.mailsuite-option-chip-selected {
+  background-color: #e8f0fe;
+  color: #1a73e8;
+}
+
+/* Template selector */
+.mailsuite-template-selector {
+  margin-top: 8px;
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #dadce0;
+  font-size: 14px;
+  color: #3c4043;
+}
+
+/* Analytics badge */
+.mailsuite-analytics-badge {
+  display: inline-flex;
+  align-items: center;
+  background-color: #e8f0fe;
+  color: #1a73e8;
+  border-radius: 12px;
+  padding: 2px 8px;
+  font-size: 12px;
+  margin-left: 8px;
+  cursor: pointer;
+}
+
+.mailsuite-analytics-badge img {
+  width: 12px;
+  height: 12px;
+  margin-right: 4px;
+}
+
+/* Notification styles */
+.mailsuite-notification {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  max-width: 300px;
+  animation: mailsuite-slide-in 0.3s ease-out;
+}
+
+@keyframes mailsuite-slide-in {
+  from { transform: translateY(100px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.mailsuite-notification-icon {
+  margin-right: 12px;
+}
+
+.mailsuite-notification-content {
+  flex: 1;
+}
+
+.mailsuite-notification-title {
+  font-weight: 500;
+  margin-bottom: 4px;
+}
+
+.mailsuite-notification-message {
+  font-size: 13px;
+  color: #5f6368;
+}
+
+.mailsuite-notification-close {
+  cursor: pointer;
+  color: #5f6368;
+  margin-left: 8px;
+}

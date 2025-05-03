@@ -1,0 +1,23 @@
+{
+  "name": "mailsuite",
+  "version": "1.0.0",
+  "description": "Advanced email tracking and analytics Chrome extension",
+  "scripts": {
+    "start": "concurrently \"npm run start:extension\" \"npm run start:server\"",
+    "start:extension": "cd extension && npm start",
+    "start:server": "cd server && npm start",
+    "build": "cd extension && npm run build",
+    "install:all": "npm install && cd extension && npm install && cd ../server && npm install"
+  },
+  "keywords": [
+    "email",
+    "tracking",
+    "analytics",
+    "chrome-extension"
+  ],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.0.1"
+  }
+}
